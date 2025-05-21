@@ -66,19 +66,17 @@ yarn dev
 ├── public/
 │   └── index.html
 ├── src/
-│   ├── api/                  # Supabase API clients and generated types (e.g., database.types.ts)
-│   ├── components/           # Reusable React components
-│   ├── hooks/                # Custom hooks (including TanStack Query hooks)
-│   ├── store/                # Zustand stores (e.g., currentUser.ts)
-│   ├── utils/                # Utility functions and helpers
-│   ├── App.tsx               # Main app component
-│   ├── main.tsx              # ReactDOM entry point
-│   └── index.css             # Global styles
+│   └── app/
+│       └── admin/
+│       └── auth/
+│   └── components/
+│   └── hooks/
+│   └── lib/
+└── middleware.ts
 ├── .env                      # Environment variables (Supabase keys, etc.)
 ├── package.json
 ├── tsconfig.json
 ├── README.md
-└── database.types.ts         # Supabase-generated types (can be placed in src/api/ if preferred)
 ```
 
 ---
