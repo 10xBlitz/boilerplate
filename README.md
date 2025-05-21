@@ -1,6 +1,6 @@
 # Next.js Boilerplate: Zustand, TanStack Query, and Supabase Types
 
-This boilerplate provides a modern starting point for React projects that leverage:
+This boilerplate provides a modern starting point for Nextjs projects that leverage:
 
 - [**Zustand**](https://zustand.docs.pmnd.rs/) for state management  
 - [**TanStack Query**](https://tanstack.com/query/latest/docs/framework/react/overview) for server state/data fetching  
@@ -10,7 +10,7 @@ This boilerplate provides a modern starting point for React projects that levera
 
 ## ✨ Features
 
-- 🔥 **Minimal setup** with best practices for scalable React apps  
+- 🔥 **Minimal setup** with best practices for scalable Nextjs apps  
 - ⚡️ **Global state** with Zustand and persistent storage support  
 - 👤 Zustand is used for managing the `CurrentUser` global state throughout the app  
 - 🚀 **Data fetching**, caching, and mutations with TanStack Query  
@@ -36,8 +36,8 @@ yarn install
 Create a `.env` file with your Supabase credentials:
 
 ```env
-VITE_SUPABASE_URL=your-supabase-url
-VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
 
 ### 3. Generate Supabase Types
