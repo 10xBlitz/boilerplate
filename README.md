@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Boilerplate: Zustand, TanStack Query, and Supabase Types
 
-## Getting Started
+This boilerplate provides a modern starting point for React projects that leverage:
 
-First, run the development server:
+- [**Zustand**](https://zustand.docs.pmnd.rs/) for state management  
+- [**TanStack Query**](https://tanstack.com/query/latest/docs/framework/react/overview) for server state/data fetching  
+- [**Supabase Types**](https://supabase.com/docs/guides/api/rest/generating-types) for type-safe API integration
+
+---
+
+## ✨ Features
+
+- 🔥 **Minimal setup** with best practices for scalable React apps  
+- ⚡️ **Global state** with Zustand and persistent storage support  
+- 👤 Zustand is used for managing the `CurrentUser` global state throughout the app  
+- 🚀 **Data fetching**, caching, and mutations with TanStack Query  
+  - TanStack Query handles all server-side data fetching and caching
+  - Queries are **automatically invalidated** after create/update/delete operations  
+- 🔒 **Type-safe API calls** using Supabase-generated types  
+- 🧪 Ready for **testing and rapid prototyping**
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+````
+
+### 2. Set Up Environment Variables
+
+Create a `.env` file with your Supabase credentials:
+
+```env
+VITE_SUPABASE_URL=your-supabase-url
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+### 3. Generate Supabase Types
+
+Automatically generate TypeScript types for your Supabase tables:
+
+```bash
+npx supabase gen types typescript --project-id "$PROJECT_REF" --schema public > database.types.ts
+```
+
+See the [Supabase documentation](https://supabase.com/docs/guides/api/rest/generating-types) for more details.
+
+### 4. Run the App
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── public/
+│   └── index.html
+├── src/
+│   ├── api/                  # Supabase API clients and generated types (e.g., database.types.ts)
+│   ├── components/           # Reusable React components
+│   ├── hooks/                # Custom hooks (including TanStack Query hooks)
+│   ├── store/                # Zustand stores (e.g., currentUser.ts)
+│   ├── utils/                # Utility functions and helpers
+│   ├── App.tsx               # Main app component
+│   ├── main.tsx              # ReactDOM entry point
+│   └── index.css             # Global styles
+├── .env                      # Environment variables (Supabase keys, etc.)
+├── package.json
+├── tsconfig.json
+├── README.md
+└── database.types.ts         # Supabase-generated types (can be placed in src/api/ if preferred)
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Usage Examples
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ✅ Zustand Store for `CurrentUser`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```ts
+import { useCurrentUserStore } from './store/currentUser';
 
-## Deploy on Vercel
+const currentUser = useCurrentUserStore(state => state.user);
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📡 TanStack Query (with Cache Invalidation)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+
+const queryClient = useQueryClient();
+
+const { data, isLoading } = useQuery(['todos'], fetchTodos);
+
+const mutation = useMutation(createTodo, {
+  onSuccess: () => {
+    queryClient.invalidateQueries(['todos']); // Invalidate cache on create/update/delete
+  },
+});
+```
+
+### 🔐 Supabase Types
+
+```ts
+import { Database, Tables, Enums } from "./database.types.ts";
+
+// Before 😕
+let movie: Database['public']['Tables']['movies']['Row'] = // ...
+
+// After 😍
+let movie: Tables<'movies'>
+
+```
+
+---
+
+## 📚 Documentation
+
+* Zustand: [https://zustand.docs.pmnd.rs/](https://zustand.docs.pmnd.rs/)
+* TanStack Query: [https://tanstack.com/query/latest/docs/framework/react/overview](https://tanstack.com/query/latest/docs/framework/react/overview)
+* Supabase Types: [https://supabase.com/docs/guides/api/rest/generating-types](https://supabase.com/docs/guides/api/rest/generating-types)
+
+---
