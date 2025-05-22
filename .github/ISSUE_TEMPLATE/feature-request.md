@@ -1,6 +1,6 @@
 ---
-name: Feature request
-about: Feature request
+name: Feature Request
+about: Include Page Name and Feature Name in Title
 title: ''
 labels: ''
 assignees: ''
