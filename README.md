@@ -69,13 +69,14 @@ yarn dev
 ├── public/
 │   └── index.html
 ├── src/
-│   └── app/
-│       └── admin/
-│       └── auth/
-│   └── components/
-│   └── hooks/
-│   └── lib/
-└── middleware.ts
+│   ├── app/
+│   │   ├── admin/
+│   │   └── auth/
+│   ├── components/           # Only global components (e.g. header, footer, etc.)
+│   ├── lib/
+│   └── supabase/
+│       └── services/         # All CRUD functions regarding Supabase will go here
+├── middleware.ts
 ├── .env                      # Environment variables (Supabase keys, etc.)
 ├── package.json
 ├── tsconfig.json
