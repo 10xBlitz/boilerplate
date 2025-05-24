@@ -5,6 +5,7 @@ This boilerplate provides a modern starting point for Nextjs projects that lever
 - [**Zustand**](https://zustand.docs.pmnd.rs/) for state management  
 - [**TanStack Query**](https://tanstack.com/query/latest/docs/framework/react/overview) for server state/data fetching  
 - [**Supabase Types**](https://supabase.com/docs/guides/api/rest/generating-types) for type-safe API integration
+- [**React Developer Tools**](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) for React Developer Tools
 - [**Shadcn**](https://ui.shadcn.com/docs) for UI
 - [**Shadcn Awesome**](https://github.com/birobirobiro/awesome-shadcn-ui?tab=readme-ov-file) Shadcn awesome components
 
