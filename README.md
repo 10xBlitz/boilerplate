@@ -8,8 +8,7 @@ This boilerplate provides a modern starting point for Nextjs projects that lever
 - [**React Developer Tools**](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) for debugging
 - [**Shadcn**](https://ui.shadcn.com/docs) for UI
 - [**Shadcn Awesome**](https://github.com/birobirobiro/awesome-shadcn-ui?tab=readme-ov-file) Shadcn awesome components
-- [**Supabase UI**](https://github.com/birobirobiro/awesome-shadcn-ui?tab=readme-ov-file) for infinite-query-hook
-
+- [**Supabase UI**](https://supabase.com/ui/docs/infinite-query-hook) for infinite query hooks
 ---
 
 ## ✨ Features
