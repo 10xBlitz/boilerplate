@@ -102,7 +102,10 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 const queryClient = useQueryClient();
 
-const { data, isLoading } = useQuery(['todos'], fetchTodos);
+// Cache results for 5 minutes (300000 ms)
+const { data, isLoading } = useQuery(['todos'], fetchTodos, {
+  staleTime: 300000, // 5 minutes in milliseconds
+});
 
 const mutation = useMutation(createTodo, {
   onSuccess: () => {
