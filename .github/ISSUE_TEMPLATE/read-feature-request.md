@@ -24,10 +24,6 @@ What sorting methods would you like (e.g. sort by date, name, relevance)?
 How should the search function behave? Are there specific fields or behaviors you expect?  
 *Example: The search should include titles and descriptions, and support partial matches.*
 
-### **Pagination**
-How should large data sets be paginated (e.g. infinite scroll, numbered pages)?  
-*Example: I'd prefer a "Load more" button after every 20 items.*
-
 ### **Figma Link**
 If applicable, please add a link to a Figma design or wireframe here.
 
