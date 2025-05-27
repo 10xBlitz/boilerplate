@@ -1,5 +1,5 @@
 ---
-name: Feature Request
+name: Read Feature Request
 about: Include Page Name and Feature Name in Title
 title: ''
 labels: ''
