@@ -10,9 +10,6 @@ assignees: ''
 ### **Describe the Feature**
 Provide a clear and concise description of the feature you’d like to see. What problem does it solve?  
 *Example: This is the main page of the app where users land after logging in. It should summarize key activity and provide quick access to top actions like [X] and [Y].*
-
-### **Describe the User Flow**
-What should the typical user journey look like when interacting with this feature?  
 *Example: The user clicks on [X], gets redirected to [Y], and sees [Z] with options to...*
 
 ### **Filters**

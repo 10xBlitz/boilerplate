@@ -11,10 +11,6 @@ assignees: ''
 **What is the feature and what problem does it solve?**  
 Provide a clear and concise summary of the feature you’d like to request. Focus on the why and the problem it addresses.  
 > Example: This is the main dashboard where users land after logging in. It should display key activity and allow quick access to common actions like [X] and [Y].
-
-## User Flow  
-**What does the user journey look like?**  
-Describe the ideal path a user would take when interacting with this feature. Mention specific screens, interactions, or edge cases.  
 > Example: The user clicks [X], is redirected to [Y], and sees [Z] with options to...
 
 ## Validation Criteria  
