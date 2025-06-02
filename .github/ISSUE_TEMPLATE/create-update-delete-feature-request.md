@@ -17,9 +17,11 @@ Provide a clear and concise summary of the feature you’d like to request. Focu
 **What are the conditions for this feature to work correctly?**  
 List specific conditions or rules that must be met. This helps define what should be tested.  
 > Example:  
-> - Users should only be able to create [entity] if they have a valid reservation  
-> - Validation error should appear if no reservation is found  
-> - Success message is shown upon valid creation
+> - Users should only be able to create [entity] if they are an admin user
+
+## On Error / On Success 
+**Create on error/success message**  
+Success message is shown upon valid creation/update/delete.
 
 ## Figma / Design Reference  
 **Link to Figma or wireframes (if available):**  
